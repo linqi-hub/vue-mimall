@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>mall</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but mall doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      &nbsp;&nbsp;&nbsp;&nbsp;train_id&nbsp;=&nbsp;pickle.load(open("../EANN-KDD18-master/Data/weibo/train_id.pickle",&nbsp;'rb')) &nbsp;&nbsp;&nbsp;&nbsp;val_id&nbsp;=&nbsp;pickle.load(open("../EANN-KDD18-master/Data/weibo/validate_id.pickle",&nbsp;'rb')) &nbsp;&nbsp;&nbsp;&nbsp;stop_words&nbsp;=&nbsp;process_data_weibo.stopwordslist()&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;pre_path&nbsp;=&nbsp;'F:/data/EANN-KDD18-master/Data/weibo/tweets/' &nbsp;&nbsp;&nbsp;&nbsp;file_list&nbsp;=&nbsp;[pre_path&nbsp;+&nbsp;"test_nonrumor.txt",&nbsp;pre_path&nbsp;+&nbsp;"test_rumor.txt",&nbsp;\ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pre_path&nbsp;+&nbsp;"train_nonrumor.txt",&nbsp;pre_path&nbsp;+&nbsp;"train_rumor.txt"] &nbsp;&nbsp;&nbsp;&nbsp;nonrumor_images&nbsp;=&nbsp;deal_image('F:/data/EANN-KDD18-master/Data/weibo/nonrumor_images/') &nbsp;&nbsp;&nbsp;&nbsp;rumor_images&nbsp;=&nbsp;deal_image('F:/data/EANN-KDD18-master/Data/weibo/rumor_images/') &nbsp;&nbsp;&nbsp;&nbsp;#train &nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;k,f&nbsp;in&nbsp;enumerate(file_list): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;=&nbsp;open(f,encoding='utf-8') &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(k&nbsp;+&nbsp;1)&nbsp;%&nbsp;2&nbsp;==&nbsp;1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label&nbsp;=&nbsp;0&nbsp;&nbsp;###&nbsp;real&nbsp;is&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label&nbsp;=&nbsp;1&nbsp;&nbsp;####fake&nbsp;is&nbsp;1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines&nbsp;=&nbsp;f.readlines() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;post_id&nbsp;=&nbsp;"" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;=&nbsp;"" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;i,&nbsp;line&nbsp;in&nbsp;enumerate(lines): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
