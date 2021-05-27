@@ -1,7 +1,8 @@
 module.exports={
   devServer:{
     host:'localhost',
-    port:8080,
+    port: 8080,
+    // 代理
     proxy:{
       '/api':{
         target:'https://mall-pre.springboot.cn',
