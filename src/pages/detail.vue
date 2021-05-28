@@ -11,7 +11,7 @@
 
 export default {
   name:'detail',
-     components: {
+  components: {
 
   }
 }

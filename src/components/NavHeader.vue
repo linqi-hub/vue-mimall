@@ -165,39 +165,39 @@
 
 <script>
 export default {
-  name: "nav-header",
+  name: 'nav-header',
   data() {
     return {
-      username: "jack",
+      username: 'jack',
       phoneList: [],
-    };
+    }
   },
   mounted() {
-    this.getProductList();
+    this.getProductList()
   },
   methods: {
     getProductList() {
       this.axios
-        .get("./products", {
+        .get('./products', {
           params: {
-            categoryID: "100012",
+            categoryID: '100012',
             // pageSize:6
           },
         })
         .then((res) => {
           if (res.list > 6) {
-            this.phoneList = res.list.slice(0, 6);
+            this.phoneList = res.list.slice(0, 6)
           }
-        });
+        })
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
-@import "./../assets/scss/base.scss";
-@import "./../assets/scss/mixin.scss";
-@import "./../assets/scss/config.scss";
+@import './../assets/scss/base.scss';
+@import './../assets/scss/mixin.scss';
+@import './../assets/scss/config.scss';
 
 .header {
   .nav-topbar {
@@ -221,7 +221,7 @@ export default {
         text-align: center;
         color: #ffffff;
         .icon-cart {
-          @include bgImg(16px, 12px, "/imgs/icon-cart-checked.png");
+          @include bgImg(16px, 12px, '/imgs/icon-cart-checked.png');
           margin-right: 4px;
         }
       }
@@ -244,15 +244,15 @@ export default {
           width: 110px;
           height: 55px;
           &:before {
-            content: " ";
-            @include bgImg(55px, 55px, "/imgs/mi-logo.png", 55px);
+            content: ' ';
+            @include bgImg(55px, 55px, '/imgs/mi-logo.png', 55px);
             display: inline-block;
             transition: margin 0.2s;
           }
           &:after {
-            content: " ";
+            content: ' ';
             display: inline-block;
-            @include bgImg(55px, 55px, "/imgs/mi-home.png", 55px);
+            @include bgImg(55px, 55px, '/imgs/mi-home.png', 55px);
           }
           &:hover:before {
             margin-left: -55px;
@@ -322,7 +322,7 @@ export default {
                 color: $colorA;
               }
               &:before {
-                content: " ";
+                content: ' ';
                 position: absolute;
                 top: 28px;
                 right: 0;
@@ -354,7 +354,7 @@ export default {
           }
           a {
             display: inline-block;
-            @include bgImg(18px, 18px, "/imgs/icon-search.png", 17px);
+            @include bgImg(18px, 18px, '/imgs/icon-search.png', 17px);
             background-size: contain;
           }
         }

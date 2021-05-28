@@ -5,24 +5,19 @@
 </template>
 
 <script>
-// import storage from './storage/index'
+import storage from './storage/index'
 export default {
-  name: "app",
+  name: 'app',
   components: {},
   data() {
-    return {
-      res: {},
-    };
+    return {}
   },
   mounted() {
-    // storage.setItem('a', 1)
-    this.axios.get("/mock/user/login.json").then((res) => {
-      this.res = res;
-    });
+    storage.setItem('a', 1)
   },
-};
+}
 </script>
 
 <style>
-@import url("./assets/scss/reset.scss");
+@import url('./assets/scss/reset.scss');
 </style>
