@@ -86,8 +86,32 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./../assets/scss/mixin.scss";
 .index {
   .swiper-box {
+    .nav-menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 264px;
+      height: 451px;
+      z-index: 9;
+      padding: 26px 0;
+      background-color: #55585a;
+      .menu-wrap {
+        .menu-item {
+          height: 50px;
+          line-height: 50px;
+          a {
+            font-size: 16px;
+            color: #ffffff;
+            padding-left: 30px;
+            $:after {
+              @include bgImg(10px, 15px, "/imgs/icon-arrow.png");
+            }
+          }
+        }
+      }
+    }
     .swiper-container {
       height: 451px;
       img {
