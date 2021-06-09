@@ -68,7 +68,9 @@
           <img src="/imgs/banner-1.png" alt="" />
         </a>
       </div>
-      <div class="product-box">
+    </div>
+    <div class="product-box">
+      <div class="container">
         <h2>手机</h2>
         <div class="wrapper">
           <div class="banner-left">
@@ -81,12 +83,15 @@
               <div class="item" v-for="(item, j) in arr" v-bind:key="j">
                 <span>新品</span>
                 <div class="item-img">
-                  <img src="" alt="" />
+                  <img
+                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/61454401f855cf5ed64747a6ac04bae5.jpg?thumb=1&w=200&h=200&f=webp&q=90"
+                    alt=""
+                  />
                 </div>
                 <div class="item-info">
                   <h3>小米9</h3>
                   <p>骁龙855，索尼4800万超广角微距</p>
-                  <p>2999</p>
+                  <p class="price">2999</p>
                 </div>
               </div>
             </div>
@@ -303,6 +308,7 @@ export default {
       height: 21px;
       line-height: 21px;
       color: $colorB;
+      margin-bottom: 20px;
     }
     .wrapper {
       display: flex;
@@ -326,6 +332,36 @@ export default {
             height: 302px;
             background-color: $colorG;
             text-align: center;
+            .item-img {
+              img {
+                height: 195px;
+              }
+            }
+            .item-info {
+              h3 {
+                font-size: $fontJ;
+                color: $colorB;
+                line-height: $fontJ;
+                font-weight: bold;
+              }
+              p {
+                color: $colorD;
+                line-height: 13px;
+                margin: 6px auto 13px;
+              }
+              .price {
+                color: #f20a0a;
+                font-size: $fontJ;
+                font-weight: bold;
+                cursor: pointer;
+                &:after {
+                  @include bgImg(22px, 22px, "/imgs/icon-cart-hover.png");
+                  content: "";
+                  margin-left: 5px;
+                  vertical-align: middle;
+                }
+              }
+            }
           }
         }
       }
