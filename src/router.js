@@ -5,27 +5,24 @@ import Index from './pages/index'
 Vue.use(Router);
 
 export default new Router({
-  routes:[
-    {
-      path:'/',
-      name:'home',
-      component:Home,
-      redirect:'/index',
-      children:[
-        {
-          path: '/index',
-          name: 'index',
-          component: Index,
-        }, {
-          path: '/product/:id',
-          name: 'product',
-          component: () => import('./pages/product.vue')
-        }, {
-          path: '/detail/:id',
-          name: 'detail',
-          component: () => import('./pages/detail.vue')
-        }
-      ]
+  routes: [{
+      path: '/',
+      name: 'home',
+      component: Home,
+      redirect: '/index',
+      children: [{
+        path: '/index',
+        name: 'index',
+        component: Index,
+      }, {
+        path: '/product/:id',
+        name: 'product',
+        component: () => import('./pages/product.vue')
+      }, {
+        path: '/detail/:id',
+        name: 'detail',
+        component: () => import('./pages/detail.vue')
+      }]
     },
     {
       path: '/login',
@@ -41,8 +38,7 @@ export default new Router({
       path: '/order',
       name: 'order',
       component: () => import('./pages/order.vue'),
-      children:[
-        {
+      children: [{
           path: 'list',
           name: 'order-list',
           component: () => import('./pages/orderList.vue')
