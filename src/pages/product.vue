@@ -1,22 +1,17 @@
 <template>
   <div>
-    product
-    <nav-header></nav-header>
-    <router-view></router-view>
-    <nav-footer></nav-footer>
+    <product-param></product-param>
   </div>
 </template>
 
 <script>
-
+import ProductParam from "./../components/ProductParam.vue";
 export default {
-  name:'product',
+  name: "product",
   components: {
-
-  }
-}
+    ProductParam,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
